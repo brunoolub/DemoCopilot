@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Subir Foto de Perfil y Mostrar Nombre</h1>
+        <form id="profileForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+            <label for="photo">Foto de Perfil:</label>
+            <input type="file" id="photo" accept="image/*" required>
+            <button type="submit">Mostrar Perfil</button>
+        </form>
+        <div id="profileDisplay" class="hidden">
+            <h2 id="displayName"></h2>
+            <img id="displayPhoto" alt="Foto de Perfil">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
