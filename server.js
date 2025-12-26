@@ -12,10 +12,12 @@ const upload = multer({ storage: storage });
 
 // Configuración de la base de datos SQL Server
 const config = {
-  server: 'localhost',
-  database: 'DemoDB',
+  server: 'medvesoft.tplinkdns.com',
+  database: 'DemoCopilot',
+  user: 'tu_usuario', // Reemplaza con tu usuario de SQL Server
+  password: 'tu_contraseña', // Reemplaza con tu contraseña
   options: {
-    trustedConnection: true, // Usar autenticación integrada de Windows
+    trustedConnection: false, // Cambiar a false para usar usuario/contraseña
     enableArithAbort: true,
     trustServerCertificate: true,
   },
