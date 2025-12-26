@@ -14,12 +14,14 @@ const upload = multer({ storage: storage });
 const config = {
   server: 'medvesoft.tplinkdns.com',
   database: 'DemoCopilot',
-  user: 'tu_usuario', // Reemplaza con tu usuario de SQL Server
-  password: 'tu_contraseña', // Reemplaza con tu contraseña
+  user: 'sa', // Reemplaza con tu usuario de SQL Server
+  password: 'H0rmiga2024', // Reemplaza con tu contraseña
+  port: 1433,
   options: {
     trustedConnection: false, // Cambiar a false para usar usuario/contraseña
     enableArithAbort: true,
     trustServerCertificate: true,
+    encrypt: false, // Para conexiones remotas
   },
 };
 

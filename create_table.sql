@@ -1,11 +1,11 @@
 -- Crear base de datos si no existe
-IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'DemoDB')
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'DemoCopilot')
 BEGIN
-    CREATE DATABASE DemoDB;
+    CREATE DATABASE DemoCopilot;
 END
 GO
 
-USE DemoDB;
+USE DemoCopilot;
 GO
 
 -- Crear tabla Profiles
