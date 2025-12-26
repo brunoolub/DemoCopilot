@@ -18,7 +18,7 @@ const config = {
   password: 'H0rmiga2024', // Reemplaza con tu contraseña
   port: 1433,
   options: {
-    trustedConnection: false, // Cambiar a false para usar usuario/contraseña
+    trustedConnection: true, // Cambiar a false para usar usuario/contraseña
     enableArithAbort: true,
     trustServerCertificate: true,
     encrypt: false, // Para conexiones remotas
@@ -52,7 +52,7 @@ app.post('/upload', upload.single('photo'), async (req, res) => {
     res.send('Perfil guardado exitosamente');
   } catch (err) {
     console.error('Error guardando en DB:', err);
-    res.status(500).send('Error guardando el perfil');
+    res.status(500).send('Error guardando el perfil: ' + err.message);
   }
 });
 
